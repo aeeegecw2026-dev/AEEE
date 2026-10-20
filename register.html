@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AEEE | Execom Registration</title>
+  <meta name="description" content="Register for the AEEE Execom call.">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#form-title">Skip to form</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html#home" aria-label="AEEE home">
+        <span class="logo-slot"><img src="images/logo.jpeg" alt="AEEE logo"></span>
+        <span class="brand-name">AEEE</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+      <nav aria-label="Main">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <div class="container">
+        <h1 id="form-title">Register for Execom call</h1>
+        <p>Fill in the details below. We will contact you on the phone number you provide.</p>
+      </div>
+    </section>
+
+    <section class="form-wrap">
+      <div class="container">
+        <form class="form-card" id="execom-form" novalidate>
+          <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+
+          <div class="field">
+            <label for="fullName">Full name</label>
+            <input type="text" id="fullName" name="fullName" autocomplete="name" required>
+            <div class="error-msg">Enter your full name.</div>
+          </div>
+
+          <div class="field">
+            <label for="admissionNumber">Admission number</label>
+            <input type="text" id="admissionNumber" name="admissionNumber" required>
+            <div class="error-msg">Enter your admission number.</div>
+          </div>
+
+          <div class="field">
+            <label for="semester">Current semester</label>
+            <select id="semester" name="semester" required>
+              <option value="" selected disabled>Select your semester</option>
+              <option>S1</option>
+              <option>S3</option>
+              <option>S5</option>
+              <option>S7</option>
+            </select>
+            <div class="error-msg">Select your current semester.</div>
+          </div>
+
+          <div class="field">
+            <label for="phone">Phone number</label>
+            <input type="tel" id="phone" name="phone" inputmode="numeric" autocomplete="tel" placeholder="10-digit mobile number" required>
+            <div class="error-msg">Enter a valid 10-digit phone number.</div>
+          </div>
+
+          <div class="field">
+            <label for="skills">What skills can you contribute to AEEE?</label>
+            <textarea id="skills" name="skills" required></textarea>
+            <div class="error-msg">Tell us about your skills.</div>
+          </div>
+
+          <div class="field">
+            <label for="position">Which position are you interested in?</label>
+            <select id="position" name="position" required>
+              <option value="" selected disabled>Select a position</option>
+              <option>Joint Secretary</option>
+              <option>Treasurer</option>
+              <option>Media Head</option>
+              <option>Design Head</option>
+              <option>Tech Head</option>
+              <option>Program Coordinator</option>
+              <option>Documentation</option>
+            </select>
+            <div class="error-msg">Select a position.</div>
+          </div>
+
+          <!-- Spam trap: real visitors never see or fill this -->
+          <div class="hp" aria-hidden="true">
+            <label>Leave blank <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+          </div>
+
+          <button type="submit" class="btn btn-primary" id="submit-btn">Submit registration</button>
+          <a class="back-link" href="index.html#home">Back to home</a>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top:0;margin-top:0;padding-top:0">
+        <span>&copy; <span id="year">2026</span> AEEE. All rights reserved.</span>
+        <span><a href="mailto:aeee@example.com">aeee@example.com</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script src="register.js"></script>
+</body>
+</html>
